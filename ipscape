@@ -1,0 +1,57 @@
+{
+  "map": {
+    "inbound": {
+      "CallCenter__c": "platformPhoneNumber"
+    },
+    "default": {
+      "Call_End__c": "callEndedDate",
+      "Call_Start__c": "callStartedDate",
+      "Service_Number_Dialed__c": "customerPhoneNumber",
+      "Activity_Type__c": "activityId",
+      "activityOrigin__c": "'ipSCAPE'",
+      "CallCenter__c": "nationalPlatformPhoneNumber",
+      "agent__c": "agentFullName"
+    }
+  },
+  "settings": {
+    "disablePaymentsBtn": "true",
+    "defaultWrapCode": null,
+    "displayWrapCodes": "true"
+  },
+  "tabs": {
+    "call": {
+      "display": true,
+      "index": 1,
+      "title": "Call",
+      "campaignInfo": true,
+      "relatedObjects": true,
+      "notes": true
+    },
+    "info": {
+      "display": true,
+      "index": 0,
+      "title": "Data",
+      "objects": {
+        "customData": true,
+        "voiceRecordingId": true,
+        "platformPhoneNumber": true,
+        "customerPhoneNumber": true,
+        "campaignTitle": true,
+        "interactionId": true,
+        "callType": true
+      }
+    }
+  },
+  "screenPopConfig": {
+    "default": {
+      "ref": "nationalPlatformPhoneNumber "
+    },
+    "rules": [
+      {
+        "callType": "Inbound",
+        "search": true,
+        "ref": "nationalPlatformPhoneNumber"
+      }
+    ]
+  }
+}
